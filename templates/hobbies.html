@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies · Obul</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364, #1b2b3a);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #f0f0f0;
+            padding: 2rem;
+        }
+
+        /* Animated gradient background */
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Navigation styling (consistent with home page) */
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem 2rem;
+            margin-bottom: 4rem;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            padding: 1rem 2.5rem;
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        nav a {
+            color: #ffffffdd;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.15rem;
+            letter-spacing: 0.5px;
+            padding: 0.4rem 0;
+            border-bottom: 2px solid transparent;
+            transition: 0.25s;
+        }
+
+        nav a:hover {
+            color: #ffd966;
+            border-bottom-color: #ffb347;
+            transform: translateY(-3px);
+        }
+
+        /* Hobbies section card */
+        section {
+            text-align: center;
+            max-width: 700px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(8px);
+            padding: 3.5rem 2rem;
+            border-radius: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 25px 45px -10px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease;
+        }
+
+        h2 {
+            font-size: 3.5rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #ffd966, #ffb347, #ff8c42);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.2rem;
+            letter-spacing: 1px;
+        }
+
+        .hobby-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+
+        .hobby-tags span {
+            background: rgba(255, 180, 90, 0.2);
+            border: 1px solid #ffb347;
+            backdrop-filter: blur(4px);
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: #ffffff;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+            transition: 0.25s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hobby-tags span:hover {
+            transform: scale(1.05);
+            background: #ffb347;
+            color: #0f2027;
+            border-color: white;
+            box-shadow: 0 15px 25px #ffb34760;
+        }
+
+        /* optional icons via unicode */
+        .hobby-tags span::before {
+            content: "🎵";
+            font-size: 2rem;
+            filter: drop-shadow(0 2px 4px black);
+        }
+
+        .hobby-tags span:nth-child(2)::before {
+            content: "💃";
+        }
+
+        .hobby-tags span:nth-child(3)::before {
+            content: "⚽";
+        }
+
+        /* Fade in animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            h2 {
+                font-size: 2.8rem;
+            }
+            .hobby-tags span {
+                font-size: 1.5rem;
+                padding: 0.6rem 1.4rem;
+            }
+            nav {
+                padding: 0.8rem 1.2rem;
+                gap: 0.8rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="/profile">Profile</a>
+    <a href="/skills">Skills</a>
+    <a href="/projects">Projects</a>
+    <a href="/softskills">Soft Skills</a>
+    <a href="/hobbies">Hobbies</a>
+    <a href="/contact">Contact</a>
+</nav>
+
+<section>
+    <h2>Hobbies</h2>
+    <div class="hobby-tags">
+        <span>Music</span>
+        <span>Dance</span>
+        <span>Football</span>
+    </div>
+    <!-- You can keep the <p> if you prefer, but the tags give a modern touch -->
+    <!-- <p>Music | Dance | Football</p> -->
+</section>
+
+</body>
+</html>
+```
