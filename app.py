@@ -1,10 +1,12 @@
-
+import os
 from flask import Flask, render_template, request, redirect, url_for
 from flask_pymongo import PyMongo
 
 app = Flask(__name__)
 
-app.config["MONGO_URI"] = "mongodb://localhost:27017/obul_portfolio"
+# Use environment variable for MongoDB (Render dashboard → Environment)
+app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+
 mongo = PyMongo(app)
 
 @app.route('/')
@@ -50,4 +52,5 @@ def submit_contact():
     return redirect(url_for('contact_page'))
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host="0.0.0.0", port=port)
