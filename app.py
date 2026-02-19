@@ -4,8 +4,8 @@ from flask_pymongo import PyMongo
 
 app = Flask(__name__)
 
-# Use environment variable for MongoDB (Render dashboard → Environment)
-app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
+# Local MongoDB
+app.config["MONGO_URI"] = "mongodb://localhost:27017/obul_portfolio"
 
 mongo = PyMongo(app)
 
